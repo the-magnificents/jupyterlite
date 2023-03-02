@@ -1,4 +1,4 @@
-# Introduction t0 Jupyterlite 
+# Introduction to Jupyterlite 
 
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
