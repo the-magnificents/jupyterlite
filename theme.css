@@ -1,0 +1,24 @@
+/* @theme custom */
+
+@import 'gaia';
+
+img[alt$="right"] {
+    float: right;
+}
+
+img[alt$="left"] {
+    float: left;
+}
+
+img[alt$="center"] {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 140px 0;
+    float: none !important;
+}
+
+section {
+    font-size: 30px;
+}
