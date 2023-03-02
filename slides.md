@@ -9,7 +9,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  
 ![center width:800px](images/wordmark.svg)
 
-*This slides were made with [Marp](https://marp.app/) and available at*
+TU Delft - [Digital Competence Centre](https://dcc.tudelft.nl)
+
+*These slides were made with [Marp](https://marp.app/) and are available [online](https://raw.githack.com/the-magnificents/jupyterlite/main/slides.html)*
 
 
 ---
@@ -19,8 +21,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 1. Introduction to JupyterLite
 2. Discuss use cases and alternatives
 3. Set up JupyterLite instance on GitHub
-4. Jupyterlite configuration
-5. [jupyterlite-sphinx](https://jupyterlite-sphinx.readthedocs.io/en/latest/)
+4. Configuring Jupyterlite
+5. Embed jupyterlite in documentation
 
 ---
 
@@ -62,7 +64,7 @@ JupyterLite is a JupyterLab distribution that **runs entirely in the browser** b
 ---
 
 ## Back-end
-JupyterLite came out of the Pyodide, which consists of the CPython 3.8 interpreter compiled to WebAssembly which allows Python to run in the browser. Pyolite runs in a [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API) and thus doesn’t block the main UI thread when intensive computations are executed.
+JupyterLite came out of Pyodide, which consists of the CPython 3.8 interpreter compiled to WebAssembly which allows Python to run in the browser. Pyolite runs in a [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API) and thus doesn’t block the main UI thread when intensive computations are executed.
 
 - Pyolite is now powered by IPython, providing access to magics, code completion, rich display, interactive widgets, and many other features
 - Initial support for interactive visualization libraries such as `altair`, `bqplot`, `ipywidgets`, `matplotlib`, and `plotly`
@@ -71,35 +73,42 @@ JupyterLite came out of the Pyodide, which consists of the CPython 3.8 interpret
 ---
 
 ## Supported packages
-Pyodide can install any Python package with a pure Python wheel from the Python Package Index (PyPI) through 
+Pyodide can install any Python package with a **pure** Python wheel from the Python Package Index (PyPI) at runtime. For exanple to install `snowballstemmer`:
 
 ```python
-
+%pip install -q snowballstemmer
 ```
 
----
-## Features
-- Real-time collaboration
-- Access local file system
+which translates to
+
+```python
+import piplite
+await piplite.install("snowballstemmer")
+```
+
+Packages containing C extensions will need to be [rebuild](https://pyodide.org/en/stable/development/new-packages.html) for Pyodide.
 
 ---
 
 # **Use cases**
 
-- Sharing course content
+- Sharing educational course content
 - Sharing computational work or papers
 - Live demonstrations
 - Generating interactive open-source package documentation
 - Backup environment for teaching
 
 ---
-## Deploying
+
+## Mutiple deployment options
 
 - Deploy your first JupyterLite website on GitHub Pages
-- Deploying on ReadTheDocs with jupyterlite-sphinx
+- Deploying on ReadTheDocs with [jupyterlite-sphinx](https://jupyterlite-sphinx.readthedocs.io/en/latest/)
 - Deploying on Vercel and Netlify
 - Deploying on GitLab Pages
 - Deploying on Binder with jupyter-server-proxy
+
+[Blog on deployment options](https://medium.com/jupyter-blog/jupyter-everywhere-f8151c2cc6e8)
 
 ---
 
@@ -109,23 +118,34 @@ What are the current solutions and what would we recommend?
 - [Thebe](https://thebe.readthedocs.io/en/stable/)
 - [Google colab](https://colab.research.google.com/)
 - JupyterHub (local or as cloud service)
-- Cloud solutions (AWS )
+- Cloud solutions (AWS)
 - [Vocareum](https://www.tudelft.nl/teaching-support/educational-tools/vocareum) (TU Delft Brightspace)
 - [Starboard](https://starboard.gg/)
 - [Bashton](https://basthon.fr/)
-
+- [pyScript](https://pyscript.net/)
+  
 ---
 
 # **Resources**
 - [Github repository](https://github.com/jupyterlite/jupyterlite)
 - [Documentation](https://jupyterlite.readthedocs.io/en/latest/)
-- Blogs
-  - https://blog.jupyter.org/jupyterlite-jupyter-%EF%B8%8F-webassembly-%EF%B8%8F-python-f6e2e41ab3fa
-- Examples
-
+- Blogs:
+  - [JupyterLite launch](https://blog.jupyter.org/jupyterlite-jupyter-%EF%B8%8F-webassembly-%EF%B8%8F-python-f6e2e41ab3fa)
+  - [Deploying JupyterLite](https://medium.com/jupyter-blog/jupyter-everywhere-f8151c2cc6e8)
+  - [Report on the JupyterLite Community Workshop 2022](https://medium.com/jupyter-blog/report-on-the-jupyterlite-community-workshop-aafaefe254ef)
 
 ---
 
-# Hands-on
+# Deploy JupyterLite on GitHub Pages
 
-https://github.com/jupyterlite/demo
+Instructions: https://jupyterlite.readthedocs.io/en/latest/quickstart/deploy.html
+
+---
+
+## Configuring JupyterLite
+
+- [Adding content](https://jupyterlite.readthedocs.io/en/latest/howto/content/files.html)
+- [Accessing local file system](https://jupyterlite.readthedocs.io/en/latest/howto/content/filesystem-access.html)
+- Embed jupyterlite in documentation with [jupyterlite-sphinx](https://jupyterlite-sphinx.readthedocs.io/en/latest/)
+- [Real-time collaboration](https://jupyterlite.readthedocs.io/en/latest/howto/configure/rtc.html)
+
