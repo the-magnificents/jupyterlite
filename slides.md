@@ -9,10 +9,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  
 ![center width:800px](images/wordmark.svg)
 
-TU Delft - [Digital Competence Centre](https://dcc.tudelft.nl)
+**TU Delft** - [Digital Competence Centre](https://dcc.tudelft.nl)
 
-*These slides were made with [Marp](https://marp.app/) and are available [online](https://raw.githack.com/the-magnificents/jupyterlite/main/slides.html)*
-
+*These slides were made with [Marp](https://marp.app/) and are available [online](https://raw.githack.com/the-magnificents/jupyterlite/main/slides.html).*
 
 ---
 <!-- paginate: true -->
@@ -20,7 +19,7 @@ TU Delft - [Digital Competence Centre](https://dcc.tudelft.nl)
 # **Contents**
 1. Introduction to JupyterLite
 2. Discuss use cases and alternatives
-3. Set up JupyterLite instance on GitHub
+3. Set up a JupyterLite instance on GitHub
 4. Configuring Jupyterlite
 5. Embed jupyterlite in documentation
 
@@ -40,7 +39,7 @@ JupyterLite is a JupyterLab distribution that **runs entirely in the browser** b
 **For example, I can now run Python code in my slides!**
 
 <iframe
-  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python"
+  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python&toolbar=1"
   width="100%"
   height="95%"
 ></iframe>
@@ -63,8 +62,20 @@ JupyterLite is a JupyterLab distribution that **runs entirely in the browser** b
 
 ---
 
+## Mutiple deployment options
+
+- Deploy your first JupyterLite website on GitHub Pages
+- Deploying on ReadTheDocs with [jupyterlite-sphinx](https://jupyterlite-sphinx.readthedocs.io/en/latest/)
+- Deploying on Vercel and Netlify
+- Deploying on GitLab Pages
+- Deploying on Binder with jupyter-server-proxy
+
+[Blog on deployment options](https://medium.com/jupyter-blog/jupyter-everywhere-f8151c2cc6e8)
+
+---
+
 ## Back-end
-JupyterLite came out of Pyodide, which consists of the CPython 3.8 interpreter compiled to WebAssembly which allows Python to run in the browser. Pyolite runs in a [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API) and thus doesn’t block the main UI thread when intensive computations are executed.
+JupyterLite came out of Pyodide, which consists of the CPython 3.10 interpreter compiled to WebAssembly which allows Python to run in the browser. Pyolite runs in a [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API) and thus doesn’t block the main UI thread when intensive computations are executed.
 
 - Pyolite is now powered by IPython, providing access to magics, code completion, rich display, interactive widgets, and many other features
 - Initial support for interactive visualization libraries such as `altair`, `bqplot`, `ipywidgets`, `matplotlib`, and `plotly`
@@ -73,20 +84,21 @@ JupyterLite came out of Pyodide, which consists of the CPython 3.8 interpreter c
 ---
 
 ## Supported packages
-Pyodide can install any Python package with a **pure** Python wheel from the Python Package Index (PyPI) at runtime. For exanple to install `snowballstemmer`:
+Pyodide can install any Python package with a **pure** Python wheel from the Python Package Index (PyPI) at runtime. For example to install `altair`:
 
 ```python
-%pip install -q snowballstemmer
+%pip install -q altair
 ```
 
 which translates to
 
 ```python
 import piplite
-await piplite.install("snowballstemmer")
+await piplite.install("altair")
 ```
 
-Packages containing C extensions will need to be [rebuild](https://pyodide.org/en/stable/development/new-packages.html) for Pyodide.
+- [Example notebook](https://github.com/jupyterlite/jupyterlite/blob/main/examples/pyolite/python-packages.ipynb) available with all the pip installation options.
+- Packages containing C extensions will need to be [rebuild](https://pyodide.org/en/stable/development/new-packages.html) for Pyodide. Already available are `numpy`, `pandas`, `scipy`, `matplotlib`, and `scikit-learn`.
 
 ---
 
@@ -97,18 +109,7 @@ Packages containing C extensions will need to be [rebuild](https://pyodide.org/e
 - Live demonstrations
 - Generating interactive open-source package documentation
 - Backup environment for teaching
-
----
-
-## Mutiple deployment options
-
-- Deploy your first JupyterLite website on GitHub Pages
-- Deploying on ReadTheDocs with [jupyterlite-sphinx](https://jupyterlite-sphinx.readthedocs.io/en/latest/)
-- Deploying on Vercel and Netlify
-- Deploying on GitLab Pages
-- Deploying on Binder with jupyter-server-proxy
-
-[Blog on deployment options](https://medium.com/jupyter-blog/jupyter-everywhere-f8151c2cc6e8)
+- ...
 
 ---
 
@@ -145,6 +146,7 @@ Instructions: https://jupyterlite.readthedocs.io/en/latest/quickstart/deploy.htm
 ## Configuring JupyterLite
 
 - [Adding content](https://jupyterlite.readthedocs.io/en/latest/howto/content/files.html)
+- [Example notebooks](https://github.com/jupyterlite/jupyterlite/tree/main/examples/pyolite)
 - [Accessing local file system](https://jupyterlite.readthedocs.io/en/latest/howto/content/filesystem-access.html)
 - Embed jupyterlite in documentation with [jupyterlite-sphinx](https://jupyterlite-sphinx.readthedocs.io/en/latest/)
 - [Real-time collaboration](https://jupyterlite.readthedocs.io/en/latest/howto/configure/rtc.html)

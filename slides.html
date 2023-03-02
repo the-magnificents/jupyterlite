@@ -12,15 +12,15 @@
 
 /* @theme custom */div#p>svg>foreignObject>section img[alt$=right]{float:right}div#p>svg>foreignObject>section img[alt$=left]{float:left}div#p>svg>foreignObject>section img[alt$=center]{display:block;max-width:100%;height:auto;margin:auto;padding:100px 0;float:none!important}div#p>svg>foreignObject>section{font-size:30px}div#p>svg>foreignObject>section{--marpit-root-font-size:30px}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-theme="custom" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
 <p><img src="images/wordmark.svg" alt="center" style="width:800px;" /></p>
-<p>TU Delft - <a href="https://dcc.tudelft.nl">Digital Competence Centre</a></p>
-<p><em>These slides were made with <a href="https://marp.app/">Marp</a> and are available <a href="https://raw.githack.com/the-magnificents/jupyterlite/main/slides.html">online</a></em></p>
+<p><strong>TU Delft</strong> - <a href="https://dcc.tudelft.nl">Digital Competence Centre</a></p>
+<p><em>These slides were made with <a href="https://marp.app/">Marp</a> and are available <a href="https://raw.githack.com/the-magnificents/jupyterlite/main/slides.html">online</a>.</em></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="2" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
 <h1><strong>Contents</strong></h1>
 <ol>
 <li>Introduction to JupyterLite</li>
 <li>Discuss use cases and alternatives</li>
-<li>Set up JupyterLite instance on GitHub</li>
+<li>Set up a JupyterLite instance on GitHub</li>
 <li>Configuring Jupyterlite</li>
 <li>Embed jupyterlite in documentation</li>
 </ol>
@@ -35,7 +35,7 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="4" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
 <p><strong>For example, I can now run Python code in my slides!</strong></p>
 <iframe
-  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python"
+  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python&toolbar=1"
   width="100%"
   height="95%"
 ></iframe>
@@ -57,36 +57,6 @@
 <p><strong>Demo:</strong> <a href="https://jupyterlite.github.io/demo/lab/index.html">https://jupyterlite.github.io/demo/lab/index.html</a></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="6" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
-<h2>Back-end</h2>
-<p>JupyterLite came out of Pyodide, which consists of the CPython 3.8 interpreter compiled to WebAssembly which allows Python to run in the browser. Pyolite runs in a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Worker</a> and thus doesn’t block the main UI thread when intensive computations are executed.</p>
-<ul>
-<li>Pyolite is now powered by IPython, providing access to magics, code completion, rich display, interactive widgets, and many other features</li>
-<li>Initial support for interactive visualization libraries such as <code>altair</code>, <code>bqplot</code>, <code>ipywidgets</code>, <code>matplotlib</code>, and <code>plotly</code></li>
-<li>View hosted example Notebooks and other files, then edit, save, and download from the browser’s <code>IndexDB</code> (or to <code>localStorage</code>)</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="7" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
-<h2>Supported packages</h2>
-<p>Pyodide can install any Python package with a <strong>pure</strong> Python wheel from the Python Package Index (PyPI) at runtime. For exanple to install <code>snowballstemmer</code>:</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">%pip install -q snowballstemmer
-</code></pre>
-<p>which translates to</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> piplite
-<span class="hljs-keyword">await</span> piplite.install(<span class="hljs-string">&quot;snowballstemmer&quot;</span>)
-</code></pre>
-<p>Packages containing C extensions will need to be <a href="https://pyodide.org/en/stable/development/new-packages.html">rebuild</a> for Pyodide.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="8" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
-<h1><strong>Use cases</strong></h1>
-<ul>
-<li>Sharing educational course content</li>
-<li>Sharing computational work or papers</li>
-<li>Live demonstrations</li>
-<li>Generating interactive open-source package documentation</li>
-<li>Backup environment for teaching</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="9" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
 <h2>Mutiple deployment options</h2>
 <ul>
 <li>Deploy your first JupyterLite website on GitHub Pages</li>
@@ -96,6 +66,37 @@
 <li>Deploying on Binder with jupyter-server-proxy</li>
 </ul>
 <p><a href="https://medium.com/jupyter-blog/jupyter-everywhere-f8151c2cc6e8">Blog on deployment options</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="7" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Back-end</h2>
+<p>JupyterLite came out of Pyodide, which consists of the CPython 3.8 interpreter compiled to WebAssembly which allows Python to run in the browser. Pyolite runs in a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Worker</a> and thus doesn’t block the main UI thread when intensive computations are executed.</p>
+<ul>
+<li>Pyolite is now powered by IPython, providing access to magics, code completion, rich display, interactive widgets, and many other features</li>
+<li>Initial support for interactive visualization libraries such as <code>altair</code>, <code>bqplot</code>, <code>ipywidgets</code>, <code>matplotlib</code>, and <code>plotly</code></li>
+<li>View hosted example Notebooks and other files, then edit, save, and download from the browser’s <code>IndexDB</code> (or to <code>localStorage</code>)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="8" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Supported packages</h2>
+<p>Pyodide can install any Python package with a <strong>pure</strong> Python wheel from the Python Package Index (PyPI) at runtime. For exanple to install <code>altair</code>:</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">%pip install -q altair
+</code></pre>
+<p>which translates to</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> piplite
+<span class="hljs-keyword">await</span> piplite.install(<span class="hljs-string">&quot;altair&quot;</span>)
+</code></pre>
+<p>Packages containing C extensions will need to be <a href="https://pyodide.org/en/stable/development/new-packages.html">rebuild</a> for Pyodide.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="9" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h1><strong>Use cases</strong></h1>
+<ul>
+<li>Sharing educational course content</li>
+<li>Sharing computational work or papers</li>
+<li>Live demonstrations</li>
+<li>Generating interactive open-source package documentation</li>
+<li>Backup environment for teaching</li>
+<li>...</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="10" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
 <h1><strong>Overview of alternatives</strong></h1>
@@ -134,6 +135,7 @@
 <h2>Configuring JupyterLite</h2>
 <ul>
 <li><a href="https://jupyterlite.readthedocs.io/en/latest/howto/content/files.html">Adding content</a></li>
+<li><a href="https://github.com/jupyterlite/jupyterlite/tree/main/examples/pyolite">Example notebooks</a></li>
 <li><a href="https://jupyterlite.readthedocs.io/en/latest/howto/content/filesystem-access.html">Accessing local file system</a></li>
 <li>Embed jupyterlite in documentation with <a href="https://jupyterlite-sphinx.readthedocs.io/en/latest/">jupyterlite-sphinx</a></li>
 <li><a href="https://jupyterlite.readthedocs.io/en/latest/howto/configure/rtc.html">Real-time collaboration</a></li>
