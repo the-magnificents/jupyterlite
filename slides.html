@@ -69,7 +69,7 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="7" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
 <h2>Back-end</h2>
-<p>JupyterLite came out of Pyodide, which consists of the CPython 3.8 interpreter compiled to WebAssembly which allows Python to run in the browser. Pyolite runs in a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Worker</a> and thus doesn’t block the main UI thread when intensive computations are executed.</p>
+<p>JupyterLite came out of Pyodide, which consists of the CPython 3.10 interpreter compiled to WebAssembly which allows Python to run in the browser. Pyolite runs in a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Worker</a> and thus doesn’t block the main UI thread when intensive computations are executed.</p>
 <ul>
 <li>Pyolite is now powered by IPython, providing access to magics, code completion, rich display, interactive widgets, and many other features</li>
 <li>Initial support for interactive visualization libraries such as <code>altair</code>, <code>bqplot</code>, <code>ipywidgets</code>, <code>matplotlib</code>, and <code>plotly</code></li>
@@ -78,14 +78,17 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="8" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
 <h2>Supported packages</h2>
-<p>Pyodide can install any Python package with a <strong>pure</strong> Python wheel from the Python Package Index (PyPI) at runtime. For exanple to install <code>altair</code>:</p>
+<p>Pyodide can install any Python package with a <strong>pure</strong> Python wheel from the Python Package Index (PyPI) at runtime. For example to install <code>altair</code>:</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">%pip install -q altair
 </code></pre>
 <p>which translates to</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> piplite
 <span class="hljs-keyword">await</span> piplite.install(<span class="hljs-string">&quot;altair&quot;</span>)
 </code></pre>
-<p>Packages containing C extensions will need to be <a href="https://pyodide.org/en/stable/development/new-packages.html">rebuild</a> for Pyodide.</p>
+<ul>
+<li><a href="https://github.com/jupyterlite/jupyterlite/blob/main/examples/pyolite/python-packages.ipynb">Example notebook</a> available with all the pip installation options.</li>
+<li>Packages containing C extensions will need to be <a href="https://pyodide.org/en/stable/development/new-packages.html">rebuild</a> for Pyodide. Already available are <code>numpy</code>, <code>pandas</code>, <code>scipy</code>, <code>matplotlib</code>, and <code>scikit-learn</code>.</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-paginate="true" data-theme="custom" data-marpit-pagination="9" data-marpit-pagination-total="13" style="--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--paginate:true;--theme:custom;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;">
 <h1><strong>Use cases</strong></h1>
